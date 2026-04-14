@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    volumes:
+      - ./services/api:/app 
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "9229:9229" 
+
+  db:
+    environment:
+      - POSTGRES_DB=test_db 
+    ports:
+      - "5432:5432" 
